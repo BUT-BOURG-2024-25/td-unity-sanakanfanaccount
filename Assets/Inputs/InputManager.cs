@@ -36,12 +36,13 @@ public class InputManager : MonoBehaviour
         EnhancedTouch.TouchSimulation.Disable();
         EnhancedTouch.EnhancedTouchSupport.Disable();
 
-        EnhancedTouch.Touch.onFingerDown -= OnFingerDown;
+        //EnhancedTouch.Touch.onFingerDown -= OnFingerDown;
     }
 
     private void OnFingerDown(EnhancedTouch.Finger finger)
     {
         Vector2 screenPosTouch = finger.currentTouch.screenPosition;
+
         RectTransform joystickRect =  JoystickAction.transform as RectTransform; 
         
         if(joystickRect.offsetMin.x <= screenPosTouch.x && joystickRect.offsetMax.x >= screenPosTouch.x
