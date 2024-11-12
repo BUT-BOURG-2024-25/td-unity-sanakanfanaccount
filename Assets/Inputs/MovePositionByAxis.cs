@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 
 public class MovePositionByAxis : MonoBehaviour
@@ -15,6 +16,9 @@ public class MovePositionByAxis : MonoBehaviour
 
     [SerializeField]
     private Rigidbody physicsbody;
+
+    private bool moveWithJoystick = false;
+
 
     private void Start()
     {
